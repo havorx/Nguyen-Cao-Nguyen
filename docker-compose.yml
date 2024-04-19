@@ -1,0 +1,25 @@
+version: '2.0'
+services:
+  crude-app:
+    image: crude-app
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    environment:
+      - CRUDE_APP_POSTGRES_DB_CONNECTION_STRING=postgres://postgres:postgres@crude-app-database:5432/postgres
+    depends_on:
+      - crude-app-database
+    expose:
+      - '8101'
+    ports:
+      - '3000:3000'
+    container_name: crude-app
+
+  crude-app-database:
+    image: postgres:16.2-alpine3.19
+    ports:
+      - '5433:5432'
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_PASSWORD: 'postgres'
+    container_name: crude-app-database
