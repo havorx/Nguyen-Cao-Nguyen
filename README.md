@@ -2,7 +2,7 @@
 
 Built with yarn, node v20, and a lot of vim-motions (yes I use neovim, btw)
 
-Dockerfile and docker-compose is included to build and recommended to test the app easily
+Dockerfile and docker-compose is included to build and to test the app easily
 
 ## Installation
 
