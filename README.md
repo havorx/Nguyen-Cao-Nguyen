@@ -1,7 +1,5 @@
 ## Description
 
-The take-home backend test repo
-
 Built with yarn, node v20, and a lot of vim-motions (yes I use neovim, btw)
 
 Dockerfile and docker-compose is included to build and recommended to test the app easily
